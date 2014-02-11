@@ -23,36 +23,36 @@ BDDCML_CDEFS   = -DAdd_
 
 #*********** Includes
 # ParMetis
-BDDCML_INCPARMETIS = -I$(HOME)/software/PARMETIS/include
+BDDCML_INCPARMETIS = -I$(PYTHONHPC)/include
 # Metis
-BDDCML_INCMETIS = -I$(HOME)/software/METIS/include
+BDDCML_INCMETIS = -I$(PYTHONHPC)/include
 # MUMPS
-BDDCML_INCMUMPS    = -I$(HOME)/software/MUMPS/include
+BDDCML_INCMUMPS    = -I$(PYTHONHPC)/include
 
 #*********** Libraries
 # library being created
-BDDCML_ROOT         = $(HOME)/programming/bddcml
+BDDCML_ROOT         = $(HOME)/repos/bddc/xx
 BDDCML_LIB_DIR      = $(BDDCML_ROOT)/lib
 LIBBDDCML           = $(BDDCML_LIB_DIR)/libbddcml.a
 # MUMPS
-BDDCML_LIBMUMPS     = -L$(HOME)/software/MUMPS/lib -ldmumps -lmumps_common -lpord
+BDDCML_LIBMUMPS     = -L$(PYTHONHPC)/lib -ldmumps -lmumps_common -lpord
 # ScaLAPACK
-BDDCML_LIBSCALAPACK = -L/usr/lib -lscalapack-openmpi
+BDDCML_LIBSCALAPACK = -L$(PYTHONHPC)/lib -lscalapack
 # BLACS
-BDDCML_LIBBLACS     = -L/usr/lib -lblacs-openmpi -lblacsCinit-openmpi -lblacsF77init-openmpi -lblacs-openmpi
+BDDCML_LIBBLACS     = -L$(PYTHONHPC)/lib -lblacs -lblacsCinit -lblacsF77init -lblacs
 # BLAS
-BDDCML_LIBBLAS      = -L/usr/lib -lblas
+BDDCML_LIBBLAS      = -lblas
 # LAPACK
-BDDCML_LIBLAPACK    = -L/usr/lib -llapack
+BDDCML_LIBLAPACK    = -llapack
 # ParMetis
-BDDCML_LIBPARMETIS  = -L$(HOME)/software/PARMETIS/lib -lparmetis
+BDDCML_LIBPARMETIS  = -L$(PYTHONHPC)/lib -lparmetis
 # Metis
-BDDCML_LIBMETIS     = -L$(HOME)/software/METIS/lib -lmetis
+BDDCML_LIBMETIS     = -L$(PYTHONHPC)/lib -lmetis
 # other needed libs ( e.g. -lmpi, -lpthread )
 BDDCML_LIBOTHERS    = 
 
 # BLOPEX objects
-BDDCML_BLOPEXDIR = $(HOME)/software/lobpcg/blopex-read-only
+BDDCML_BLOPEXDIR = $(HOME)/repos/blopex
 BDDCML_INCBLOPEX = \
    -I$(BDDCML_BLOPEXDIR)/blopex_serial_double/multivector \
    -I$(BDDCML_BLOPEXDIR)/blopex_serial_double/pcg_multi \
