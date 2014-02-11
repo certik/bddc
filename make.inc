@@ -39,7 +39,7 @@ BDDCML_LIBMUMPS     = -L$(PYTHONHPC)/lib -ldmumps -lmumps_common -lpord
 # ScaLAPACK
 BDDCML_LIBSCALAPACK = -L$(PYTHONHPC)/lib -lscalapack
 # BLACS
-BDDCML_LIBBLACS     = -L$(PYTHONHPC)/lib -lblacs -lblacsCinit -lblacsF77init -lblacs
+BDDCML_LIBBLACS     = -L$(PYTHONHPC)/lib
 # BLAS
 BDDCML_LIBBLAS      = -lblas
 # LAPACK
